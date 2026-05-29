@@ -1,52 +1,52 @@
 # Mini Banking System DDD
 
-Учебное C++20-приложение, показывающее ядро банковской системы через DDD и Clean Architecture. Проект моделирует клиентов, счета, денежные операции, переводы, комиссии, лимиты и хранение данных в памяти.
+The project implements clients, accounts, money transactions, transfers, fees, limits, and in-memory data storage.
 
-## Возможности
+## Features
 
-- создание клиентов;
-- открытие дебетовых и накопительных счетов;
-- пополнение и снятие денег;
-- перевод между счетами с комиссией;
-- проверка лимита одной операции;
-- просмотр баланса;
-- просмотр истории транзакций;
-- получение списков клиентов и счетов.
+- creating clients;
+- opening debit and savings accounts;
+- depositing and withdrawing funds;
+- transferring between accounts with a fee;
+- checking the limit for a single transaction;
+- viewing the balance;
+- viewing transaction history;
+- obtaining lists of clients and accounts.
 
-## Сборка
+## Build
 
 ```bash
 cmake -S . -B build
 cmake --build build
 ```
 
-Запуск демонстрационного composition root:
+Running the demo composition root:
 
 ```bash
 ./build/banking_app
 ```
 
-Запуск с JSON-хранилищем:
+Running with JSON storage:
 
 ```bash
 ./build/banking_app data
 ```
 
-Тесты:
+Tests:
 
 ```bash
 ctest --test-dir build --output-on-failure
 ```
 
-## Архитектура
+## Architecture
 
-Проект разделен на слои:
+The project is divided into layers:
 
-- `domain` - бизнес-логика: клиенты, счета, деньги, транзакции, политики и доменные сервисы;
-- `application` - use cases, DTO, порты репозиториев и генерация идентификаторов;
-- `infrastructure` - реализации портов, in-memory и JSON репозитории.
+- `domain` - business logic: clients, accounts, money, transactions, policies, and domain services;
+- `application` - use cases, repository ports, and identifier generation;
+- `infrastructure` - port implementations, in-memory and JSON repositories.
 
-Основные DDD элементы:
+Main DDD elements:
 
 - Entities: `Client`, `BankAccount`, `Transaction`;
 - Value Objects: `Money`, `ClientId`, `AccountId`, `TransactionId`;
@@ -54,11 +54,11 @@ ctest --test-dir build --output-on-failure
 - Domain Service: `TransferService`;
 - Repository Ports: `IClientRepository`, `IAccountRepository`, `ITransactionRepository`.
 
-## Паттерны и принципы
+## Patterns and Principles
 
-- Strategy - политики комиссий и лимитов: `ICommissionPolicy`, `ILimitPolicy`;
-- Repository - интерфейсы репозиториев в application и реализации в infrastructure;
-- Factory - создание счетов через `AccountFactory`, создание id через `IdGenerator`;
-- Facade - `BankingFacade` скрывает создание репозиториев, политик и use cases;
-- Dependency Inversion - application зависит от абстракций, infrastructure их реализует;
-- Single Responsibility - сущности, use cases и репозитории имеют отдельные зоны ответственности.
+- Strategy - commission and limit policies: `ICommissionPolicy`, `ILimitPolicy`;
+- Repository - repository interfaces in the application and implementations in the infrastructure;
+- Factory - account creation via `AccountFactory`, id creation via `IdGenerator`;
+- Facade - `BankingFacade` hides the creation of repositories, policies, and use cases;
+- Dependency Inversion - the application depends on abstractions, the infrastructure implements them;
+- Single Responsibility - entities, use cases, and repositories have separate areas of responsibility.
