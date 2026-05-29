@@ -20,4 +20,4 @@ class InMemoryAccountRepository final : public application::IAccountRepository {
   std::unordered_map<std::string, domain::BankAccount> accounts_;
 };
 
-}  // namespace banking::infrastructure
+}

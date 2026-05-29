@@ -64,4 +64,4 @@ OperationResponse TransferMoneyUseCase::Execute(
   };
 }
 
-}  // namespace banking::application
+}

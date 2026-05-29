@@ -20,4 +20,4 @@ class IAccountRepository {
   virtual ~IAccountRepository() = default;
 };
 
-}  // namespace banking::application
+}

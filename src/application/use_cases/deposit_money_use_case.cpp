@@ -48,4 +48,4 @@ OperationResponse DepositMoneyUseCase::Execute(
   };
 }
 
-}  // namespace banking::application
+}

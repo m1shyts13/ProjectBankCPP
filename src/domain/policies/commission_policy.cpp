@@ -30,4 +30,4 @@ Money PercentCommissionPolicy::Calculate(const Money& amount) const {
   return Money(amount.Kopecks() * basis_points_ / 10000);
 }
 
-}  // namespace banking::domain
+}

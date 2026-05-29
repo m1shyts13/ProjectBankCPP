@@ -25,4 +25,4 @@ class TransferMoneyUseCase {
   const domain::TransferService& transfer_service_;
 };
 
-}  // namespace banking::application
+}

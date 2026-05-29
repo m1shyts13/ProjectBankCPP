@@ -82,4 +82,4 @@ void Transaction::Validate() const {
   }
 }
 
-}  // namespace banking::domain
+}

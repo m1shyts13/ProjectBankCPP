@@ -28,4 +28,4 @@ class Money {
   long long kopecks_;
 };
 
-}  // namespace banking::domain
+}

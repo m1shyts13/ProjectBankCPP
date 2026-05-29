@@ -7,4 +7,4 @@ enum class AccountStatus {
   Closed,
 };
 
-}  // namespace banking::domain
+}

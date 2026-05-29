@@ -22,4 +22,4 @@ class WithdrawMoneyUseCase {
   IdGenerator& transaction_id_generator_;
 };
 
-}  // namespace banking::application
+}

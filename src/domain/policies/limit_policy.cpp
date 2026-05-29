@@ -19,4 +19,4 @@ void SingleOperationLimitPolicy::Check(const Money& amount) const {
   }
 }
 
-}  // namespace banking::domain
+}

@@ -32,6 +32,12 @@ cmake --build build
 ./build/banking_app data
 ```
 
+Тесты:
+
+```bash
+ctest --test-dir build --output-on-failure
+```
+
 ## Архитектура
 
 Проект разделен на слои:

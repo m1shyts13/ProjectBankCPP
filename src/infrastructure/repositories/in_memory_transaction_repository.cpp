@@ -29,4 +29,4 @@ std::vector<domain::Transaction> InMemoryTransactionRepository::FindAll() {
   return transactions_;
 }
 
-}  // namespace banking::infrastructure
+}

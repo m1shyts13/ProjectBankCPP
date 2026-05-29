@@ -39,4 +39,4 @@ class Transaction {
   std::string description_;
 };
 
-}  // namespace banking::domain
+}

@@ -27,4 +27,4 @@ class OpenAccountUseCase {
   const domain::AccountFactory& account_factory_;
 };
 
-}  // namespace banking::application
+}

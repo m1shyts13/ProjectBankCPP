@@ -15,7 +15,7 @@ bool IsBlank(const std::string& value) {
   });
 }
 
-}  // namespace
+}
 
 namespace banking::application {
 
@@ -40,4 +40,4 @@ OperationResponse CreateClientUseCase::Execute(
   };
 }
 
-}  // namespace banking::application
+}

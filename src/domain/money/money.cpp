@@ -70,4 +70,4 @@ bool Money::operator>=(const Money& other) const {
   return kopecks_ >= other.kopecks_;
 }
 
-}  // namespace banking::domain
+}

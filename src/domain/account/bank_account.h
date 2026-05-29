@@ -33,4 +33,4 @@ class BankAccount {
   AccountType type_;
 };
 
-}  // namespace banking::domain
+}

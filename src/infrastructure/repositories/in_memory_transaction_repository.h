@@ -18,4 +18,4 @@ class InMemoryTransactionRepository final
   std::vector<domain::Transaction> transactions_;
 };
 
-}  // namespace banking::infrastructure
+}

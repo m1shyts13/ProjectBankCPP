@@ -9,4 +9,4 @@ BankAccount AccountFactory::Create(AccountId id, ClientId owner_id,
   return BankAccount(std::move(id), std::move(owner_id), type);
 }
 
-}  // namespace banking::domain
+}

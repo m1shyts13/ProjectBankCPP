@@ -18,4 +18,4 @@ class ShowTransactionHistoryUseCase {
   ITransactionRepository& transaction_repository_;
 };
 
-}  // namespace banking::application
+}

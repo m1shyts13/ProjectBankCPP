@@ -15,4 +15,4 @@ class ClientId {
   std::string value_;
 };
 
-}  // namespace banking::domain
+}

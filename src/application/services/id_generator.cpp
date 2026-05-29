@@ -14,4 +14,4 @@ std::string IdGenerator::Next() {
   return prefix_ + "-" + std::to_string(next_value_++);
 }
 
-}  // namespace banking::application
+}

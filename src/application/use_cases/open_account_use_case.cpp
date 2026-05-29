@@ -46,4 +46,4 @@ domain::AccountType OpenAccountUseCase::ParseAccountType(
   throw std::runtime_error("unknown account type");
 }
 
-}  // namespace banking::application
+}

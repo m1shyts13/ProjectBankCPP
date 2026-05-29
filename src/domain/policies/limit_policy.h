@@ -25,4 +25,4 @@ class SingleOperationLimitPolicy : public ILimitPolicy {
   Money limit_;
 };
 
-}  // namespace banking::domain
+}

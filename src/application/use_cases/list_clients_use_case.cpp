@@ -16,4 +16,4 @@ ListClientsResponse ListClientsUseCase::Execute() {
   return response;
 }
 
-}  // namespace banking::application
+}

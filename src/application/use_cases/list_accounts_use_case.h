@@ -15,4 +15,4 @@ class ListAccountsUseCase {
   IAccountRepository& account_repository_;
 };
 
-}  // namespace banking::application
+}

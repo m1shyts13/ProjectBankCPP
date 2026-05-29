@@ -19,4 +19,4 @@ class CreateClientUseCase {
   IdGenerator& id_generator_;
 };
 
-}  // namespace banking::application
+}

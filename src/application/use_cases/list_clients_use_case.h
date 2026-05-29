@@ -15,4 +15,4 @@ class ListClientsUseCase {
   IClientRepository& client_repository_;
 };
 
-}  // namespace banking::application
+}

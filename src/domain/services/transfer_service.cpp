@@ -26,4 +26,4 @@ TransferResult TransferService::Transfer(BankAccount& from, BankAccount& to,
   };
 }
 
-}  // namespace banking::domain
+}

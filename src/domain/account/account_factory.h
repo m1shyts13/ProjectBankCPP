@@ -12,4 +12,4 @@ class AccountFactory {
   BankAccount Create(AccountId id, ClientId owner_id, AccountType type) const;
 };
 
-}  // namespace banking::domain
+}

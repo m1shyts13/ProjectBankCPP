@@ -52,3 +52,9 @@ target_link_libraries(banking_core PUBLIC nlohmann_json::nlohmann_json)
 
 add_executable(banking_app src/main.cpp)
 target_link_libraries(banking_app PRIVATE banking_core)
+
+add_executable(banking_tests tests/test_main.cpp)
+target_link_libraries(banking_tests PRIVATE banking_core)
+
+enable_testing()
+add_test(NAME banking_tests COMMAND banking_tests)

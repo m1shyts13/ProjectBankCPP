@@ -7,4 +7,4 @@ enum class AccountType {
   Savings,
 };
 
-}  // namespace banking::domain
+}

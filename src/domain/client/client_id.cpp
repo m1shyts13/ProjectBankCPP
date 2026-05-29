@@ -27,4 +27,4 @@ bool ClientId::operator==(const ClientId& other) const {
   return value_ == other.value_;
 }
 
-}  // namespace banking::domain
+}

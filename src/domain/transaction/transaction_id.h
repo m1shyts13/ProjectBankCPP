@@ -15,4 +15,4 @@ class TransactionId {
   std::string value_;
 };
 
-}  // namespace banking::domain
+}

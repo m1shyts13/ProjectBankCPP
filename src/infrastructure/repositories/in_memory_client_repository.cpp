@@ -24,4 +24,4 @@ std::vector<domain::Client> InMemoryClientRepository::FindAll() {
   return result;
 }
 
-}  // namespace banking::infrastructure
+}

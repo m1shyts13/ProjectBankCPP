@@ -24,4 +24,4 @@ const std::string& Client::FullName() const {
   return full_name_;
 }
 
-}  // namespace banking::domain
+}

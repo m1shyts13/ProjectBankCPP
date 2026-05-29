@@ -8,4 +8,4 @@ enum class TransactionType {
   Transfer,
 };
 
-}  // namespace banking::domain
+}

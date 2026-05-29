@@ -15,4 +15,4 @@ class IdGenerator {
   unsigned long long next_value_;
 };
 
-}  // namespace banking::application
+}

@@ -37,4 +37,4 @@ struct ShowTransactionHistoryCommand {
   std::string account_id;
 };
 
-}  // namespace banking::application
+}

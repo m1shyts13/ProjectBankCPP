@@ -16,4 +16,4 @@ class IClientRepository {
   virtual ~IClientRepository() = default;
 };
 
-}  // namespace banking::application
+}

@@ -13,7 +13,7 @@ std::string AccountTypeToString(domain::AccountType type) {
   return "Unknown";
 }
 
-}  // namespace
+}
 
 ListAccountsUseCase::ListAccountsUseCase(
     IAccountRepository& account_repository)
@@ -33,4 +33,4 @@ ListAccountsResponse ListAccountsUseCase::Execute() {
   return response;
 }
 
-}  // namespace banking::application
+}

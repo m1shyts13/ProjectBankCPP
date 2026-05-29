@@ -16,4 +16,4 @@ class ITransactionRepository {
   virtual ~ITransactionRepository() = default;
 };
 
-}  // namespace banking::application
+}

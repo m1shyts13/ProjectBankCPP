@@ -18,4 +18,4 @@ class Client {
   std::string full_name_;
 };
 
-}  // namespace banking::domain
+}

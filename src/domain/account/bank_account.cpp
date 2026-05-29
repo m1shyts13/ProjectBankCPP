@@ -70,4 +70,4 @@ void BankAccount::EnsurePositiveAmount(const Money& amount) {
   }
 }
 
-}  // namespace banking::domain
+}

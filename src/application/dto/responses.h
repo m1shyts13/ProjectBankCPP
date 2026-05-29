@@ -53,4 +53,4 @@ struct ListAccountsResponse {
   std::vector<AccountSummaryResponse> accounts;
 };
 
-}  // namespace banking::application
+}

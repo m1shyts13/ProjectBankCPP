@@ -17,4 +17,4 @@ class InMemoryClientRepository final : public application::IClientRepository {
   std::unordered_map<std::string, domain::Client> clients_;
 };
 
-}  // namespace banking::infrastructure
+}

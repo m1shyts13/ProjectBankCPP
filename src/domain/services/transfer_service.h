@@ -28,4 +28,4 @@ class TransferService {
   std::shared_ptr<const ILimitPolicy> limit_policy_;
 };
 
-}  // namespace banking::domain
+}

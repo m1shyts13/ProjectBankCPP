@@ -20,4 +20,4 @@ bool AccountId::operator==(const AccountId& other) const {
   return value_ == other.value_;
 }
 
-}  // namespace banking::domain
+}

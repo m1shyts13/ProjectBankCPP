@@ -26,7 +26,7 @@ std::string TransactionTypeToString(domain::TransactionType type) {
   return "Unknown";
 }
 
-}  // namespace
+}
 
 ShowTransactionHistoryUseCase::ShowTransactionHistoryUseCase(
     ITransactionRepository& transaction_repository)
@@ -55,4 +55,4 @@ TransactionHistoryResponse ShowTransactionHistoryUseCase::Execute(
   return response;
 }
 
-}  // namespace banking::application
+}

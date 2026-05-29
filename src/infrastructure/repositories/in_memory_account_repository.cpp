@@ -35,4 +35,4 @@ std::vector<domain::BankAccount> InMemoryAccountRepository::FindAll() {
   return result;
 }
 
-}  // namespace banking::infrastructure
+}

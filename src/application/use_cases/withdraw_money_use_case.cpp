@@ -48,4 +48,4 @@ OperationResponse WithdrawMoneyUseCase::Execute(
   };
 }
 
-}  // namespace banking::application
+}

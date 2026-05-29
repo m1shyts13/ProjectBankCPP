@@ -26,4 +26,4 @@ BalanceResponse ShowBalanceUseCase::Execute(const ShowBalanceCommand& command) {
   };
 }
 
-}  // namespace banking::application
+}

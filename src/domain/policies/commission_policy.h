@@ -35,4 +35,4 @@ class PercentCommissionPolicy : public ICommissionPolicy {
   int basis_points_;
 };
 
-}  // namespace banking::domain
+}

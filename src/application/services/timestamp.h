@@ -12,4 +12,4 @@ inline std::string CurrentTimestamp() {
   return std::to_string(seconds.count());
 }
 
-}  // namespace banking::application
+}

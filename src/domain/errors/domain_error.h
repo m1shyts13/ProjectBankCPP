@@ -10,4 +10,4 @@ class DomainError : public std::runtime_error {
   explicit DomainError(const std::string& message);
 };
 
-}  // namespace banking::domain
+}
