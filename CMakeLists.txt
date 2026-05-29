@@ -32,6 +32,7 @@ add_library(banking_core
   src/infrastructure/repositories/in_memory_client_repository.cpp
   src/infrastructure/repositories/in_memory_account_repository.cpp
   src/infrastructure/repositories/in_memory_transaction_repository.cpp
+  src/infrastructure/facades/banking_facade.cpp
 )
 
 target_include_directories(banking_core PUBLIC src)

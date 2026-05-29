@@ -47,5 +47,6 @@ cmake --build build
 - Strategy - политики комиссий и лимитов: `ICommissionPolicy`, `ILimitPolicy`;
 - Repository - интерфейсы репозиториев в application и реализации в infrastructure;
 - Factory - создание счетов через `AccountFactory`, создание id через `IdGenerator`;
+- Facade - `BankingFacade` скрывает создание репозиториев, политик и use cases;
 - Dependency Inversion - application зависит от абстракций, infrastructure их реализует;
 - Single Responsibility - сущности, use cases и репозитории имеют отдельные зоны ответственности.
