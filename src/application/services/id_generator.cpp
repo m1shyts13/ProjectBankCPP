@@ -4,8 +4,8 @@
 
 namespace banking::application {
 
-IdGenerator::IdGenerator(std::string prefix)
-    : prefix_(std::move(prefix)), next_value_(1) {}
+IdGenerator::IdGenerator(std::string prefix, unsigned long long first_value)
+    : prefix_(std::move(prefix)), next_value_(first_value) {}
 
 std::string IdGenerator::Next() {
   if (prefix_.empty()) {

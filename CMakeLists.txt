@@ -6,6 +6,15 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+include(FetchContent)
+
+FetchContent_Declare(
+  nlohmann_json
+  URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz
+  DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+FetchContent_MakeAvailable(nlohmann_json)
+
 add_library(banking_core
   src/domain/money/money.cpp
   src/domain/client/client.cpp
@@ -32,10 +41,14 @@ add_library(banking_core
   src/infrastructure/repositories/in_memory_client_repository.cpp
   src/infrastructure/repositories/in_memory_account_repository.cpp
   src/infrastructure/repositories/in_memory_transaction_repository.cpp
+  src/infrastructure/repositories/json_client_repository.cpp
+  src/infrastructure/repositories/json_account_repository.cpp
+  src/infrastructure/repositories/json_transaction_repository.cpp
   src/infrastructure/facades/banking_facade.cpp
 )
 
 target_include_directories(banking_core PUBLIC src)
+target_link_libraries(banking_core PUBLIC nlohmann_json::nlohmann_json)
 
 add_executable(banking_app src/main.cpp)
 target_link_libraries(banking_app PRIVATE banking_core)

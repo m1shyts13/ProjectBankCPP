@@ -6,7 +6,7 @@ namespace banking::application {
 
 class IdGenerator {
  public:
-  explicit IdGenerator(std::string prefix);
+  explicit IdGenerator(std::string prefix, unsigned long long first_value = 1);
 
   std::string Next();
 

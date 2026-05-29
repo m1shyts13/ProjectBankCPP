@@ -1,9 +1,13 @@
 #pragma once
 
+#include <filesystem>
 #include <memory>
 #include <string>
 
 #include "application/dto/responses.h"
+#include "application/ports/account_repository.h"
+#include "application/ports/client_repository.h"
+#include "application/ports/transaction_repository.h"
 #include "application/services/id_generator.h"
 #include "application/use_cases/create_client_use_case.h"
 #include "application/use_cases/deposit_money_use_case.h"
@@ -18,15 +22,13 @@
 #include "domain/policies/commission_policy.h"
 #include "domain/policies/limit_policy.h"
 #include "domain/services/transfer_service.h"
-#include "infrastructure/repositories/in_memory_account_repository.h"
-#include "infrastructure/repositories/in_memory_client_repository.h"
-#include "infrastructure/repositories/in_memory_transaction_repository.h"
 
 namespace banking::infrastructure {
 
 class BankingFacade {
  public:
   BankingFacade();
+  explicit BankingFacade(std::filesystem::path storage_directory);
 
   application::OperationResponse CreateClient(const std::string& full_name);
   application::OperationResponse OpenAccount(const std::string& client_id,
@@ -45,9 +47,15 @@ class BankingFacade {
   application::ListAccountsResponse ListAccounts();
 
  private:
-  InMemoryClientRepository client_repository_;
-  InMemoryAccountRepository account_repository_;
-  InMemoryTransactionRepository transaction_repository_;
+  BankingFacade(
+      std::unique_ptr<application::IClientRepository> client_repository,
+      std::unique_ptr<application::IAccountRepository> account_repository,
+      std::unique_ptr<application::ITransactionRepository>
+          transaction_repository);
+
+  std::unique_ptr<application::IClientRepository> client_repository_;
+  std::unique_ptr<application::IAccountRepository> account_repository_;
+  std::unique_ptr<application::ITransactionRepository> transaction_repository_;
 
   application::IdGenerator client_id_generator_;
   application::IdGenerator account_id_generator_;
